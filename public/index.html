@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherPro - Your Local Weather</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">WeatherPro</h1>
+        <div class="search-container">
+            <input type="text" id="inputValue" placeholder="Enter your location" class="search-input">
+            <button class="search-btn" onclick="locationData()">Search</button>
+        </div>
+    </header>
+    <main>
+        <section class="weather-info">
+            <div id="data" class="weather-data">Enter a location to see the weather</div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 WeatherPro. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDKs -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyCPnS8ae64wUi9BKpeYbKmJ-bMtXUcLxJs",
+          authDomain: "electro-weather.firebaseapp.com",
+          projectId: "electro-weather",
+          storageBucket: "electro-weather.appspot.com",
+          messagingSenderId: "682474215921",
+          appId: "1:682474215921:web:4edcb96fe0ee347ec44c50",
+          measurementId: "G-YXZFD6X102"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
